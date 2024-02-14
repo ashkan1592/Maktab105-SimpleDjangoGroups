@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Delete song {% endblock %}
+
+{% block content %}
+    <h3>Delete song</h3>
+
+    <P>{{ song.name }}</P>
+    <P>{{ song.category.category }}</P>
+    <P>{{ song.url }}</P>
+    <P>{{ song.cover }}</P>
+    <br>
+    <p>Are you sure you want to delete {{ song.name }}?</p>
+      <form id="delete-form" method="post">
+        {% csrf_token %}
+        <button type="submit" id="confirm-btn">Yes</button>
+        <button type="button" id="cancel-btn">No</button>
+      </form>
+
+      <script>
+            document.getElementById('cancel-btn').addEventListener('click', function() {
+            window.location.href = '/';
+            });
+      </script>
+
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Add music {% endblock %}
+
+{% block content %}
+
+    <h3>Add Music</h3>
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value="Add Music">
+    </form>
+
+{% endblock %}
