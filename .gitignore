@@ -1,5 +1,5 @@
 .venv/
 .idea/
 media/
-main/__pycache__/
-main/migrations/
+**/__pycache__/*
+**/migrations/*
