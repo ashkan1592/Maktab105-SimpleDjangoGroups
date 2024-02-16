@@ -25,7 +25,8 @@ python manage.py migrate
 
 5. **Start the development server:** Run the Django development server to launch the application.
 ```
-python manage.py runserver```
+python manage.py runserver
+```
 
 ## Features
 - **Add Music:** Users can add new music entries by providing details such as URL, cover image, and album.
