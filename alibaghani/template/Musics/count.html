@@ -1,0 +1,20 @@
+{% block content %}
+    <div class="">
+        {% include "Main/base.html" %}
+        <div class="bg-gradient-to-r from-indigo-500  shadow-md px-8 pt-6 pb-8 mb-4">
+            <h1 class="text-5xl mb-4 ">Music Counts</h1>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex items-center">
+                    <p class="font-bold mr-2">Category:</p>
+                    <ul>{% for title_count in category_counts_data %}
+                        <li><u>{{ title_count.name }} </u>:<b> {{ title_count.num_albums }}</b></li>
+                    {% endfor %}</ul>
+                    <br><br><br><br><br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% include "Main/footer.html" %}
