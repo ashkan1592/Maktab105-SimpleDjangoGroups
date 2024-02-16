@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Info</title>
+</head>
+<body>
+    <h1>Music Info</h1>
+    <h2>Reports:</h2>
+    <ul>
+        <li>Total Songs: {{ total_songs }}</li>
+        <li>Total Categories: {{ total_categories }}</li>
+        <li>Songs per Category:</li>
+        <ul>
+            {% for category in categories %}
+                <li>{{ category.category }}: {{ category.total_songs }}</li>
+            {% endfor %}
+        </ul>
+    </ul>
+</body>
+</html>
