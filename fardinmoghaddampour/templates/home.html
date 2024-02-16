@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>List of Songs</h1>
+    <ul>
+        {% for song in songs %}
+        <li>{{ song.name }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{% url 'add_music' %}">
+        <input type="submit" value="Add Music">
+    </form>
+    <form action="{% url 'info' %}">
+        <input type="submit" value="Info">
+    </form>
+</body>
+</html>
