@@ -1,0 +1,13 @@
+{% extends 'repeated.html'%}
+{% block title%} information about musics {% endblock %}
+
+{% block info%}
+
+    <h1>you have {{ musics }} musics</h1>
+    <h1>you have {{ category_count}} category</h1>
+    {% for item in music_count_by_category %}
+        <h1>Category: {{ item.category }}</h1>
+        <h1>Number of Music: {{ item.count }}</h1>
+    {% endfor %}
+
+{% endblock %}
