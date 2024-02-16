@@ -1,0 +1,7 @@
+{% extends 'repeated.html'%}
+{% block title%} view our musics {% endblock %}
+{% block music%}
+     {% for music in my_music %}
+         <h3> {{ music.name }}</h3>
+    {% endfor %}
+{% endblock %}

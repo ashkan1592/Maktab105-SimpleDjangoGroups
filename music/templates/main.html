@@ -1,0 +1,8 @@
+{% extends 'repeated.html'%}
+{% block title%} pages of our site {% endblock %}
+{% block urls %}
+<h1>welcome to the music page select what do you want?</h1>
+    {% for urls in all_urls %}
+        <a href="{{ urls.url }}">{{ urls.name }}</a> <br>
+    {% endfor %}
+{% endblock %}
