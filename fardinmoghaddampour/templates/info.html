@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+</head>
+<body>
+    <h1>Information</h1>
+    <p>Total number of songs: {{ num_songs }}</p>
+    <p>Total number of categories: {{ num_categories }}</p>
+    <h2>Songs per Categories</h2>
+    <ul>
+        {% for category in songs_per_category %}
+        <li>{{ category.name }}: {{ category.num_songs }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
