@@ -1,0 +1,30 @@
+<!-- music_info.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Information</title>
+    {% comment %}
+    <link rel="stylesheet" href="{% static 'your_app_name/css/style.css' %}" />
+    {% endcomment %}
+    <!-- Add any additional stylesheet links or scripts here -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Music Information</h1>
+      <ul>
+        <li>Total Songs: {{ total_songs }}</li>
+        <li>Total Categories: {{ categories_count }}</li>
+        <li>Category Counts:</li>
+        <ul>
+          {% for category, count in category_counts.items %}
+          <li>{{ category }}: {{ count }}</li>
+          {% endfor %}
+        </ul>
+        <!-- Add more information as needed -->
+      </ul>
+      <!-- You can add additional content or styling here -->
+    </div>
+  </body>
+</html>
