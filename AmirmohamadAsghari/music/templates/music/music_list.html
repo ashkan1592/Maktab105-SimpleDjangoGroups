@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music List</title>
+</head>
+<body>
+    <h1>Music List</h1>
+    <ul>
+        {% for music in musics %}
+            <li>{{ music.name }}</li>
+        {% empty %}
+            <li>No music found.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'music_create' %}">Add Music</a>
+</body>
+</html>
