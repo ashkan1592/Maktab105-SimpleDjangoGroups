@@ -1,9 +1,0 @@
-{% extends 'repeated.html'%}
-{% block title%} page for add new music to library {% endblock %}
-{% block add%}
-    <form method="post" novalidate>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="add">
-    </form>
-{% endblock %}
