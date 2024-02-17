@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block add %}
+    <h1>Add Music</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add</button>
+    </form>
+{% endblock %}

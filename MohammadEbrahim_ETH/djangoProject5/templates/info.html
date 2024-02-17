@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block info %}
+    <h1>Music Info</h1>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Songs Count</th>
+        </tr>
+        {% for report in object_list %}
+        <tr>
+            <td>{{ report.category }}</td>
+            <td>{{ report.songs_count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

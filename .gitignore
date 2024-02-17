@@ -3,3 +3,6 @@ venv/
 .vscode/
 !**/migrations/__init__.py
 **/migrations/**
+*/db.sqlite3
+*/hs_err_pid13012.log
+*/hs_err_pid5036.log

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Music List</h1>
+    <ul>
+    {% for music in object_list %}
+        <li>{{ music.name }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
