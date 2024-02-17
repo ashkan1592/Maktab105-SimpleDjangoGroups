@@ -67,7 +67,7 @@ class DeleteMusicByIDView(DeleteView, SoftDeleteQuerySet):
         Adds a success message to inform the user.
         Redirects the user to the success URL.
         """
-        MusicModel.objects.filter(name=self.kwargs.get('pk')).delete()
+        MusicModel.objects.filter(id=self.kwargs.get('pk')).delete()
         messages.success(request, 'Music deleted successfully', extra_tags='success')
         return redirect(self.get_success_url())
 
