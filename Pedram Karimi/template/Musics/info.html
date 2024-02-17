@@ -15,10 +15,14 @@
             <p><span class="font-bold">created at :</span> {{ song.update_time }}</p>
             <p><span class="font-bold">modified at:</span> {{ song.pk }}</p>
             <p><span class="font-bold">ID :</span> {{ song.id }}</p>
-            <br>
+            {% if song.id|stringformat:"s"|length == 36 %}
+                <a href="{% url 'delete' song.id %}" class="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-700">Delete with ID</a>
+                <a href="{% url 'delete' song.name %}" class="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-700">Delete with name</a>
+            {% else %}
+                <p>Invalid ID format</p>
+            {% endif %}
 
-            <a href="{% url 'delete' song.id %}"
-               class="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-700">Delete with ID</a>
+
 
             <br><br><br><br>
 

@@ -6,9 +6,18 @@
             <div class="grid grid-cols-2 gap-4">
                 <div class="flex items-center">
                     <p class="font-bold mr-2">Category:</p>
-                    <ul>{% for title_count in category_counts_data %}
-                        <li><u>{{ title_count.name }} </u>:<b> {{ title_count.num_albums }}</b></li>
-                    {% endfor %}</ul>
+                    <div class="flex items-center">
+                        <p class="font-bold mr-2">Album Count:</p>
+                        <p>{{ album_count }}</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="font-bold mr-2">Category Count:</p>
+                        <p>{{ category_count }}</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="font-bold mr-2">Music Count:</p>
+                        <p>{{ music_count }}</p>
+                    </div>
                     <br><br><br><br><br>
                 </div>
 
