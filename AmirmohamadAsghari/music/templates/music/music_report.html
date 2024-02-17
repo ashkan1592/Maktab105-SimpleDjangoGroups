@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Report</title>
+</head>
+<body>
+    <h1>Music Report</h1>
+    <p>Number of songs: {{ num_songs }}</p>
+    <p>Number of categories: {{ num_categories }}</p>
+    <h2>Categories:</h2>
+    <ul>
+        {% for category in categories %}
+            <li>{{ category.category }}: {{ category.count }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

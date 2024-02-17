@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>USERS:</p>
+     {% if messages %}
+        <ul >
+            {% for message in messages %}
+                <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+  {% for i in all_musics %}
+      {% if not i.is_delete %}
+          <div>
+            <h2>TITLE: {{ i.name }}</h2>
+            <p>CATEGORY_NAME: {{ i.category }}</p>
+            <p>===============================</p>
+          </div>
+      {% endif %}
+  {% endfor %}
+</body>
+</html>
