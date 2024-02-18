@@ -1,0 +1,22 @@
+<!-- music_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music Detail</title>
+</head>
+
+<body>
+    <h1>{{ music.name }}</h1>
+    <p>URL: {{ music.url }}</p>
+    <p>Cover: {{ music.cover }}</p>
+    <p>Categories:</p>
+    <ul>
+        {% for category in music.categories.all %}
+        <li>{{ category.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

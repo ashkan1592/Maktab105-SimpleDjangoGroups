@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+</head>
+
+<body>
+    <h1>Information</h1>
+    <p>Total number of music: {{ total_music }}</p>
+    <ul>
+        {% for category, count in music_in_categories.items %}
+        <li>Number of music in {{ category }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total number of categories: {{ total_categories }}</p>
+</body>
+
+</html>

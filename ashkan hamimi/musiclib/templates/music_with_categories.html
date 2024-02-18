@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music with Categories</title>
+</head>
+
+<body>
+
+    <h1>Music with Categories</h1>
+    <ul>
+        {% for music in music_with_categories %}
+        <li>{{ music.name }}</li>
+        <ul>
+            {% for category in music.categories.all %}
+            <li>{{ category.name }}</li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
