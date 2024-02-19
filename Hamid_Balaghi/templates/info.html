@@ -1,0 +1,16 @@
+{%  extends 'base.html' %}
+{% block title %} Info {% endblock %}
+{% block content %}
+
+    <h2>Information</h2>
+    <p>Number of songs: {{ song_count }}</p>
+    <p>Number of categories: {{ category_count }}</p>
+
+    <h3>Category Counts:</h3>
+        <ul>
+        {% for category, count in category_counts.items %}
+            <li>{{ category }}: {{ count }}</li>
+        {% endfor %}
+        </ul>
+
+{% endblock %}
