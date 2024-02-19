@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music List</title>
+</head>
+
+<body>
+    <h1>Music List</h1>
+    <ul>
+        {% for music in all_music %}
+        <li>
+            <strong>{{ music.id }}-{{ music.name }}</strong>
+            <ul>
+                {% for category in music.categories.all %}
+                <li>{{category.id}}-{{ category.name }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
